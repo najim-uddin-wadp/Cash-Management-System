@@ -1,0 +1,17 @@
+{% extends 'master/base.html' %}
+
+{% block body %}
+
+<h1>{{title}}</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{cash_form}}
+
+
+  <input type="submit" value="{{button}}">
+</form>
+
+
+{% endblock body %}

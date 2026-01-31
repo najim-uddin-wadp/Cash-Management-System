@@ -1,0 +1,15 @@
+{% extends 'master/base.html' %}
+
+{% block body %}
+{% include 'message.html' %}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+<div class="w3-container">
+  <div class="w3-panel w3-card"><p>Total Income = {{total_cash}}</p></div>
+  <div class="w3-panel w3-card-2"><p>Total Expenses = {{total_expenses}}</p></div>
+  <div class="w3-panel w3-card-4"><p>Remaining Balance = {{total_balance}}</p></div>
+</div>
+
+
+{% endblock body %}  

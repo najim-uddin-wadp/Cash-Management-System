@@ -1,0 +1,31 @@
+{% include 'master/base.html' %}
+
+{% block body %}
+<h1>Expense List</h1>
+
+<table>
+  <tr>
+    <th>SL No</th>
+    <th>Datetime</th>
+    <th>Amount</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  {% for i in list_data %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{i.datetime}}</td>
+    <td>{{i.amount}}</td>
+    <td>{{i.description}}</td>
+    <td>
+        <a href="{% url 'Edit_Expense_Add' i.id %}">Edit</a>
+        <a href="{% url 'Delete_exp_list' i.id %}">Delete</a>
+    </td>
+
+    </td>
+    
+  </tr>
+  {% endfor %}
+</table>
+<button><a href="{% url 'Expense_Add' %}">Add Expenses</a></button>
+{% endblock body %}

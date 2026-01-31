@@ -1,0 +1,53 @@
+{% extends 'master/base.html' %}
+
+{% block body %}
+<h1>Cash Transactions</h1>
+<table>
+  <tr>
+    <th>SL No</th>
+    <th>Source</th>
+    <th>DateTime</th>
+    <th>Amount</th>
+    <th>Description</th>
+  </tr>
+  {% for i in data1 %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{i.source}}</td>
+    <td>{{i.dateTime}}</td>
+    <td>{{i.amount}}</td>
+    <td>{{i.description}}</td>
+
+  </tr>
+  {% endfor %}
+
+</table>
+
+<h1>Expense Transaction History</h1>
+
+<table>
+  <tr>
+    <th>SL No</th>
+    <th>Datetime</th>
+    <th>Amount</th>
+    <th>Description</th>
+  </tr>
+  {% for i in data2 %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{i.datetime}}</td>
+    <td>{{i.amount}}</td>
+    <td>{{i.description}}</td>
+
+
+    </td>
+    
+  </tr>
+  {% endfor %}
+</table>
+
+</table>
+
+
+
+{% endblock body %}
